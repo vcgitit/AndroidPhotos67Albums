@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vcpb.androidphotos67albums.AddPhotoActivity">
+
+
+    <LinearLayout
+        android:layout_width="366dp"
+        android:layout_height="443dp"
+        android:id="@+id/addPhotoLayout"
+        android:orientation="vertical"
+        android:weightSum="1"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="10dp">
+
+        <TextView
+            android:id="@+id/addPhotoTextview"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:text="album"
+            android:layout_marginStart="12dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/addPhotoTextviewFilename"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:text="Please Select A Photo Filename:"
+            android:layout_marginStart="12dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp" />
+
+        <Spinner
+            android:id="@+id/addPhotoSpinner"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="425dp"
+            android:ems="10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:spinnerMode="dropdown"
+            android:theme="@android:style/Theme.Holo.Light"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/addPhotoTextviewTagname"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:text="Please Select Photo Inigial Tag name:"
+            android:layout_marginStart="12dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp" />
+
+
+        <RadioGroup
+            android:id="@+id/addPhotoRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="445dp" >
+
+            <RadioButton
+                android:id="@+id/addPhotoRadioButtonPerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Person" />
+
+            <RadioButton
+                android:id="@+id/addPhotoRadioButtonLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location" />
+
+            />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/addPhotoTextviewTagvalue"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:text="Please Input Photo Inigial Tag Value:"
+            android:layout_marginStart="12dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp" />
+
+        <EditText
+            android:id="@+id/addPhotoTagvalue"
+            android:layout_width="375dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text=""
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp" />
+
+        <Button
+            android:id="@+id/addPhotoButton"
+            android:layout_width="142dp"
+            android:layout_marginLeft="100dp"
+            android:layout_height="wrap_content"
+            android:text="Add Photo"
+            android:onClick="processAddPhoto" />
+
+        <TextView
+            android:id="@+id/addPhotoMessage"
+            android:layout_width="375dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="message"
+            android:layout_marginEnd="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

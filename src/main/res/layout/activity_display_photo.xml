@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vcpb.androidphotos67albums.DisplayPhotoActivity"
+    tools:layout_editor_absoluteX="0dp"
+    app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+    android:layout_marginBottom="0dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/displayPhotoTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Photo Name" />
+
+        <ImageView
+            android:id="@+id/displayPhotoImageView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/displayPhotoTagName"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginStart="12dp"
+                android:layout_weight="0.47"
+                android:text="Select Tag name:"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+
+            <RadioGroup
+                android:id="@+id/displayPhotoRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp"
+                android:layout_weight="0.4"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                tools:layout_editor_absoluteX="200dp"
+                tools:layout_editor_absoluteY="445dp">
+
+                <RadioButton
+                    android:id="@+id/displayPhotoRadioButtonPerson"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.36"
+                    android:text="Person" />
+
+                <RadioButton
+                    android:id="@+id/displayPhotoRadioButtonLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.36"
+                    android:text="Location" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/displayPhotoTagValueTextView"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="  Enter Tag Value " />
+
+            <EditText
+                android:id="@+id/displayPhotoTagValueTextValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="" />
+        </LinearLayout>
+
+
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Tag List" />
+
+            <ScrollView
+                android:id="@+id/displayPhotoTaglist"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <Spinner
+                    android:id="@+id/displayPhotoSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                </ScrollView>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="8dp">
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="               TAG BUTTONS" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="              SLIDESHOW BUTTONS" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/displayPhotoAddTagButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text="Add"
+                android:onClick="processAddTag" />
+
+            <Button
+                android:id="@+id/displayPhotoDeleteTagButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text="Drop"
+                android:onClick="processDeleteTag" />
+
+            <Button
+                android:id="@+id/displayPhotoClearTagButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text="Clear"
+                android:onClick="processClearTag" />
+
+            <Button
+                android:id="@+id/displayPhotoLeftSlideshowButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Go Left"
+                android:onClick="processPreviousPhoto" />
+
+            <Button
+                android:id="@+id/displayPhotoRightSlideshowButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Go Right"
+                android:onClick="processNextPhoto" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/displayPhotoMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_marginLeft="12dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="message"
+            app:layout_constraintLeft_toLeftOf="parent" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
